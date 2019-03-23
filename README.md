@@ -1,5 +1,8 @@
 # README
 
+for search, the url is
+localhost:3000/search?term='search+term'
+
 ### Schema Tables
 #### Regions
 <table>
@@ -105,7 +108,7 @@
 
   1. Regions
     1. Create
-    
+
     ```bash
     #!/bin/bash
 
