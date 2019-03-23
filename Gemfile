@@ -43,3 +43,19 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Gemfile
+# Elasticsearch integration
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+group :development, :test do
+  # Test Framework
+  gem 'rspec'
+  gem 'rspec-rails'
+end
+group :test do
+  # Clean Database between tests
+  gem 'database_cleaner'
+  # Programmatically start and stop ES for tests
+  gem 'elasticsearch-extensions'
+end

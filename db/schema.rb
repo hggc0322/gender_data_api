@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_23_192753) do
+ActiveRecord::Schema.define(version: 2019_03_23_211033) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "industry"
-    t.decimal "median_gender_gap_2019"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "benefits"
+    t.float "hourly_median_gender_gap_2018"
+    t.float "bonus_median_gender_gap_2018"
   end
 
   create_table "regions", force: :cascade do |t|

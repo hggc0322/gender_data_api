@@ -11,7 +11,7 @@ require 'csv'
 Company.delete_all
 Region.delete_all
 
-region_text = File.read(Rails.root.join('db', 'region_seed_Fake.csv'))
+region_text = File.read(Rails.root.join('db', 'table2_regions.csv'))
 
 region_csv = CSV.parse(region_text, headers: true, encoding: 'ISO-8859-1')
 
@@ -22,7 +22,7 @@ end
 
 puts "There are #{Region.count} rows"
 
-company_text = File.read(Rails.root.join('db', 'fake_company_seed.csv'))
+company_text = File.read(Rails.root.join('db', 'table1_companies.csv'))
 
 company_csv = CSV.parse(company_text, headers: true, encoding: 'ISO-8859-1')
 

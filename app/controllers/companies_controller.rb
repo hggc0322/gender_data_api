@@ -38,6 +38,14 @@ class CompaniesController < ApplicationController
     @company.destroy
   end
 
+  # GET /companies/name
+  def search
+    term = params[:term] || nil
+    companies = []
+    companies = Company.where('name LIKE ?', "%#{term}%") if term
+    render json: companies
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_company
@@ -46,6 +54,6 @@ class CompaniesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def company_params
-      params.require(:company).permit(:name, :address, :industry, :median_gender_gap_2019)
+      params.require(:company).permit(:name, :address, :industry, :median_gender_gap_2019, :benefits)
     end
 end
