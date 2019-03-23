@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  industry: MyString
+  median_gender_gap_2019: 
+
+two:
+  name: MyString
+  address: MyString
+  industry: MyString
+  median_gender_gap_2019: 
