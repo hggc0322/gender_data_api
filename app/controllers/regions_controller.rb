@@ -46,6 +46,6 @@ class RegionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def region_params
-      params.fetch(:region, {})
+      params.require(:region).permit(:name, :higher_than_2016_national_average, :rank_2016, :top_1, :top_2, :top_3, :bottom_1, :bottom_2, :bottom_3)
     end
 end

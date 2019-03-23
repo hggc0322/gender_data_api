@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_23_155102) do
+ActiveRecord::Schema.define(version: 2019_03_23_160127) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -23,17 +23,16 @@ ActiveRecord::Schema.define(version: 2019_03_23_155102) do
 
   create_table "regions", force: :cascade do |t|
     t.string "name"
+    t.boolean "higher_than_2016_national_average"
+    t.integer "rank_2016"
+    t.string "top_1"
+    t.string "top_2"
+    t.string "top_3"
+    t.string "bottom_1"
+    t.string "bottom_2"
+    t.string "bottom_3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "compare_to_2019_mean"
-    t.integer "gender_gap_rank_2019"
-    t.decimal "mean_wage_gap_2019"
-    t.string "top_1_company"
-    t.string "top_2_company"
-    t.string "top_3_company"
-    t.string "bottom_1_company"
-    t.string "bottom_2_company"
-    t.string "bottom_3_company"
   end
 
 end

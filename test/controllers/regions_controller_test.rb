@@ -12,7 +12,7 @@ class RegionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create region" do
     assert_difference('Region.count') do
-      post regions_url, params: { region: {  } }, as: :json
+      post regions_url, params: { region: { bottom_1: @region.bottom_1, bottom_2: @region.bottom_2, bottom_3: @region.bottom_3, higher_than_2016_national_average: @region.higher_than_2016_national_average, name: @region.name, rank_2016: @region.rank_2016, top_1: @region.top_1, top_2: @region.top_2, top_3: @region.top_3 } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class RegionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update region" do
-    patch region_url(@region), params: { region: {  } }, as: :json
+    patch region_url(@region), params: { region: { bottom_1: @region.bottom_1, bottom_2: @region.bottom_2, bottom_3: @region.bottom_3, higher_than_2016_national_average: @region.higher_than_2016_national_average, name: @region.name, rank_2016: @region.rank_2016, top_1: @region.top_1, top_2: @region.top_2, top_3: @region.top_3 } }, as: :json
     assert_response 200
   end
 
