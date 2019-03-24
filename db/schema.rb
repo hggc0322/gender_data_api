@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_23_211033) do
+ActiveRecord::Schema.define(version: 2019_03_24_003729) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 2019_03_23_211033) do
     t.datetime "updated_at", null: false
     t.decimal "mean_wage_gap_2016"
     t.decimal "mean_wage_gap_change"
+    t.decimal "frac_top_1"
+    t.decimal "frac_top_2"
+    t.decimal "frac_top_3"
+    t.decimal "frac_bottom_1"
+    t.decimal "frac_bottom_2"
+    t.decimal "frac_bottom_3"
   end
 
 end

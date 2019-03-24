@@ -11,7 +11,7 @@ require 'csv'
 Company.delete_all
 Region.delete_all
 
-region_text = File.read(Rails.root.join('db', 'table2_regions.csv'))
+region_text = File.read(Rails.root.join('db', 'table2_regions_addfracmale.csv'))
 
 region_csv = CSV.parse(region_text, headers: true, encoding: 'ISO-8859-1')
 
